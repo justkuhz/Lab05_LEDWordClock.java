@@ -33,6 +33,10 @@ public class Lab05_LEDWordClock {
     private JLabel MINUTE_THREE;
     private JLabel MINUTE_FOUR;
 
+    //test stuff
+    private static JMenu fileMenu;
+    private static JMenuItem test;
+
     Color highlight = new Color(220,220,220);
     Color off = new Color(100, 100 ,100);
 
@@ -178,6 +182,13 @@ public class Lab05_LEDWordClock {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("LED Word Clock");
+
+        JMenuBar menu = new JMenuBar();
+        frame.setJMenuBar(menu);
+        fileMenu = new JMenu("File");
+        menu.add(fileMenu);
+
+
         frame.setContentPane(new Lab05_LEDWordClock().ClockPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
